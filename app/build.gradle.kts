@@ -24,6 +24,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+
         buildConfigField("String", "WEATHER_API_KEY", "\"64718a1a943a8c272aee0036bdccb68e\"")
 
     }
@@ -88,10 +90,13 @@ dependencies {
     implementation("androidx.compose.material3:material3")
 
     // Networking
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
+    implementation("com.github.haroldadmin:NetworkResponseAdapter:4.2.2")
 
     // Dependency Injection
     implementation("com.google.dagger:hilt-android:2.50")

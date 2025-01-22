@@ -1,4 +1,4 @@
-package com.example.weatherapp.presentation
+package com.example.weatherapp.presentation.ui
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -25,14 +25,15 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.rounded.*
 import androidx.compose.material3.*
-import androidx.compose.runtime.*
 import androidx.compose.material.icons.rounded.WbSunny
 import androidx.compose.material.icons.rounded.Cloud
 import androidx.compose.material.icons.rounded.WaterDrop
 import androidx.compose.material.icons.rounded.LocationOn
 import androidx.compose.material.icons.rounded.Warning
+import androidx.compose.ui.tooling.preview.Preview
+import com.example.weatherapp.presentation.viewmodel.WeatherViewModel
+import com.example.weatherapp.ui.theme.WeatherAppTheme
 
 
 @Composable
@@ -221,5 +222,13 @@ fun WeatherInfo(weather: WeatherInfo) {
                 )
             }
         }
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun WeatherScreenPreview() {
+    WeatherAppTheme {
+        WeatherScreen()
     }
 }
